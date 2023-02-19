@@ -4,7 +4,7 @@
     box-sizing:border-box;
 }
 .content{
-    padding: 0 13%;
+    padding: 0 20%;
 }
 *{
     text-decoration: none!important;
@@ -85,7 +85,7 @@ width: 100%;
 
 .span2{
     grid-row: span 2;
-    width: 100px;
+    width: 33%;
 }
 .about_me{
     background: #2B2B2B;
@@ -95,8 +95,19 @@ width: 100%;
     padding-top: 10vh;
     
     color: #ffffff;
-    grid-template-columns: 28% auto;
+    grid-template-columns: 33% auto;
     grid-template-rows: repeat(1, 1fr);
+}
+.about_me-section img{
+    transform: scale(2);
+    position: relative;
+    bottom: -50px;
+    left: 100px;
+    /* transform: translateY(20px); */
+    border:2px solid rgb(43, 5, 131);
+    box-shadow: 2px 2px 2px 2px #f06000, -2px 2px 2px 2px #f06000, 2px -2px 2px 2px #f06000, -2px -2px 2px 2px #f06000;
+
+  border-radius:50%;
 }
 .about_me-section h1{
     text-transform: capitalize;
@@ -130,15 +141,17 @@ width: 100%;
 
 
 .resume_items{
-    /* padding-top: 10vh; */
-    /* display: grid;
-    grid-template-columns: 30% auto;
+    padding-top: 10vh;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: grid;
+    /* grid-template-columns: 30% auto;
     padding-bottom: 14vh; */
 }
 .grids{
     padding-top: 10vh;
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 33% auto;
 
 }
 .span2{
@@ -191,7 +204,7 @@ color: white;
     
     }
 
-@media screen  and ( max-width: 600px){
+@media screen  and ( max-width: 500px){
 
     .about_me-section{
         grid-template-columns: auto;
@@ -221,3 +234,68 @@ color: white;
 }
 
 
+/* promotion  */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;800;900&display=swap);
+
+
+.timer{
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    justify-content: center;
+    color:#f06000;
+    padding: 0 15%;
+    font-size: 1.7rem;
+    
+    position: relative;
+    /* bottom: 1%; */
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    line-height: 10vh;
+    align-items: center;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    background: linear-gradient( 135deg, rgba(38, 37, 37, 0.9), rgba(42, 41, 41, 0.9) );
+    backdrop-filter: blur(8px);
+    /* box-shadow: 4px 2px 34px 10px rgba(5,22,255,0.8) inset;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=34, Direction=135, Color=#0516FF); /*IE 5.5-7*/
+} */
+.timer span{
+    color:#ffffff;
+    font-weight: 700;
+
+}
+.timer i{
+    color: white;
+}
+.timer .img img{
+    width: 30%;
+    height: 30%;
+}
+@media screen and (max-width: 500px){
+    .timer{
+     height: 5vh;
+     line-height: 2vh;
+     font-size: 1.5rem;
+    
+}
+
+}
+
+.timer2{
+    position: fixed;
+    left: 20px;
+    top: 40%;
+   font-size: 0.7rem;
+    display: grid;
+    gap:5px;
+    background: linear-gradient( 135deg, rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1) );
+    backdrop-filter: blur(8px);
+    color:#ffc505;
+    font-weight: 700;
+    padding: 2vh 1vw;
+    border-radius: 3px;
+}
+.timer2 span{
+    
+    font-size: 1.2rem;
+}

@@ -3,6 +3,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    user-select: none;
    
 }
 .menu-container{
@@ -16,13 +17,10 @@
     grid-template-columns: 10% 20% auto;
     justify-content: center;
     align-items: center;
+    
 }
-.menu-container  a{
 
-    /* border: 2px solid red;
-     */
-}
-.menu-container  a img{
+.menu-container a img{
     width: 50%;
     height: 50%;
     border-radius: 50%;
@@ -30,14 +28,12 @@
     /* line-height: 10vh; */
     
     }
-.content{
-    padding: 0 13%;
-}
+
 .nav{
     
     position: fixed;
     top: 0.625rem;
-    z-index: 2;
+    z-index: 33;
     right: 0;
     background-color: rgba(35, 35, 36, 0.697);
     
@@ -84,9 +80,10 @@
     transition: all 0.5s ease-in;
     display: inline-block;
 }
+
 .button:hover{
     color:#2B2B2B;
-    
+    cursor: pointer;
     background-color:rgba(241, 241, 207, 0.721);
 }
 
@@ -139,6 +136,20 @@ animation-direction:alternate;
 animation-fill-mode:forwards;
 animation-iteration-count: infinite;
     
+}
+
+.col-md-3 span,
+.col-md-3 a,
+.col-md-3 p{
+    text-decoration: none;
+    color:#10066b;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+.col-md-3 span:hover,
+.col-md-3 a:hover,
+.col-md-3 p:hover{
+    color:#c8e203;
 }
 @keyframes title_animation {
     0%{
@@ -227,9 +238,204 @@ animation-iteration-count: infinite;
  font-size: 1.4rem;
  font-family: 'Roboto Mono', monospace!important;
 }
-@media screen  and ( max-width: 600px){
+.contact-section {
+    margin: 0 15%;
+  }
+  .contact_title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    text-align: center;
+  
+    text-transform: uppercase;
+    color: #07147d;
+    font-size: 2.7rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  .contact_main label,
+  .contact_main input {
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+  fieldset {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* .contact-section .form-floating label {
+    color: #1a024f;
+  } */
+ 
+  .contact-wrap.w-100.p-md-5.p-4 .mb-4 {
+    color: #f06000;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+  .contact-wrap.w-100.p-md-5.p-4 #form-message-success {
+    color: #c8e203;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 5px #07147d, 0px 0px 7px #07147d, 0px 0px 10px #07147d,
+      0px 0px 12px #07147d;
+    font-weight: 400;
+  }
+  
+  
+  .form-group{
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  .contactForm{
+    display: flex;
+    
+    flex-wrap: nowrap;
+  }
+  .wrapper .label {
+    
+    color:#fff;
+  }
+  .form-group input,
+  .form-group textarea {
+    transition: all 0.5s ease-out;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus{
+    opacity: 0.4;
+  
+    /* border: 1px solid #000; */
+    outline: invert;
+    color: #fff;
+    background: #000;
+  }
+ 
+#form-message-success{
+    display: none;
+}
+  .boglanish{
+ 
+    background-image: url(../img/imm.jpg);
+    background-position: right top;
+    background-attachment: fixed;
+    height: 800px;
+    position: relative;
+    /* perspective: 100000px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .ftco-section {
+    
+    display: flex;
+    align-items:center;
+    justify-items: center;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+   
+    /* height: fit-content; */
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease;
+    transform-origin: center;
+ 
+  }
+  .ftco-section .front,
+  .ftco-section .back{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    backface-visibility: hidden;
+   
+   
+  
+  }
+  .front{
+    z-index: 2;
+    background: #000;
+    transform: rotateY(0deg);
+  }
+  .back{
+    
+    background: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  
+  }
+  .back h1{
+    padding: 3vh 0;
+    text-transform: capitalize;
+    word-spacing: 10px;
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    color:rgba(255, 255, 255, 0.7);
+  }
+  .ftco-section.show{
+    display: block;
+    transform: rotateY(180deg);
+  }
+  
+    /* contact validation */
+
+.success{
+  
+   
+   box-shadow:  10px 0px 5px #07ca0e,
+   0px -10px 5px #07ca0e,
+   0px 10px 5px #07ca0e,
+   -10px 0px 5px #07ca0e;
+   
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.error{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow:  10px 0px 5px #f31905,
+    0px -10px 5px #f31905,
+    0px 10px 5px #f31905,
+    -10px 0px 5px #f31905;
+    
+
+    }
+
+
+@media screen  and ( max-width: 500px){
   html{
-    font-size: 7px;
+    font-size: 10px;
   }
   .project_items{
     
@@ -244,6 +450,7 @@ animation-iteration-count: infinite;
 *{
     grid-template-columns: auto;
     grid-template-rows: auto;
+   
 }
 .grids p,
 .about_me-section p{
@@ -263,25 +470,34 @@ animation-iteration-count: infinite;
     margin-bottom: 3vh;
 }
 .royxat .royxat_item{
-    margin: 0 2%;
+    margin: 0 0.5%;
 }
 .royxat{
     justify-content: center;
     
-    margin: 0 3%;
+    margin: 0 1%;
 }
 
 .menu-container{
     
-grid-template-columns: 10% 5% auto ;
+grid-template-columns: 10% 0% auto ;
+gap: 20px;
 }
 .menu-container  a {
     width: fit-content;
     height: fit-content;
-
+    padding: 0 5px;
+    
 }
-.menu-container  a img{
+.menu-container .royxat a{
+    font-size: 14px;
+    
+}
+
+
+.menu-container a img{
    margin-left: -2rem;
+   width: 50px;
 }
 /* .content{
     padding: 5%;
@@ -298,3 +514,6 @@ grid-template-columns: 10% 5% auto ;
     font-size: 1.2rem;
 }
 }
+
+
+
