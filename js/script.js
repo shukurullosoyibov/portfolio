@@ -154,16 +154,17 @@ function setClock2(selector){
 
 const contact1 = document.querySelector('#contact1');
 const tabss = document.querySelectorAll('.contact1');
-        contact1.addEventListener('click', ()=>{
-            console.log(contact1);
-            if(!contact1.classList.contains('show')){
+        contact1.addEventListener('click', (e)=>{
+           console.log(e.target);
+           
+            if(!contact1.classList.contains('show') && e.target.classList.contains('front') || e.target.classList.contains('form-group') || e.target.classList.contains('contact-wrap') ){
                 contact1.classList.add('show');
             }
             else{
                 contact1.classList.remove('show');
             }
         
-         
+        
         
         })
 
