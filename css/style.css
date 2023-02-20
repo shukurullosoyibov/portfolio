@@ -204,7 +204,7 @@ color: white;
     
     }
 
-@media screen  and ( max-width: 500px){
+@media screen  and ( max-width: 600px){
 
     .about_me-section{
         grid-template-columns: auto;
@@ -271,7 +271,7 @@ color: white;
     width: 30%;
     height: 30%;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .timer{
      height: 5vh;
      line-height: 2vh;
